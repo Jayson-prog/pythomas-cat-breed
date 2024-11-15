@@ -1,0 +1,38 @@
+.teacher-card {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  .animate { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+/* Animation for scrolling image */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.container {
+  padding: 20px;
+  text-align: center;
+}
+.popular-breeds-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.scrolling-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 50px; 
+}
+.scrolling-images {
+  display: inline-flex;
+  animation: scroll 30s linear infinite;
+}
+.scrolling-images img {
+  width: 150px;  /* Adjusted width */
+  height: 150px; /* Adjusted height for a circular shape */
+  margin-right: 30px; 
+  border-radius: 50%; /* Makes the images circular */
+  object-fit: cover; /* Ensures the images fill the circular frame */
+}

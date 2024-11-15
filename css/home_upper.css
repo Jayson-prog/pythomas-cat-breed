@@ -1,0 +1,115 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  nav {
+    background-color: #0b4c41;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0; /* Remove padding */
+  }
+
+  .navbar-brand img {
+    height: 100px; /* Adjust size */
+    width: 100px;
+    margin: 0; /* Remove extra margin */
+    padding: 0;
+  }
+
+  .container-fluid {
+    padding: 0 15px;
+  }
+
+  .hero-section {
+    background-color: #0b4c41;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content h1 {
+    font-weight: 300;
+    color: white;
+  }
+
+  .hero-content p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+  }
+
+  .btn-custom {
+    background-color: #c9d900;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-custom:hover {
+    background-color: #a8b700;
+  }
+
+  .students-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: -10px;
+    border: 2px solid white;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 20px;
+    }
+  }
+  .product-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.nav-link {
+  color: #ffffff;
+  padding: 5px 5px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav-link:hover{
+  transform: scale(1.1);
+  color: #fff;
+  background-color:#c9d900;
+}
+
+.hover-text{
+  opacity: 0;
+}
+.hover-text:hover{
+  position: absolute; 
+  top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: rgb(19, 19, 2); font-size: 21px;
+   transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+
+ 
+
+
+
+
+  

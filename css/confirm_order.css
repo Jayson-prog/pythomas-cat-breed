@@ -1,0 +1,30 @@
+.slide-up {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+  }
+
+  /* Active state for animation when it enters the viewport */
+  .slide-up.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Custom styles for confirmation page */
+  body {
+    background-color: #f8f9fa;
+  }
+  .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .order-summary {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  .thank-you-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }

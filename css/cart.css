@@ -1,0 +1,31 @@
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-in-out;
+  }
+  .slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .course-card {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  .price {
+    font-weight: bold;
+    text-align: right;
+  }
+  .total-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  .coupon-input {
+    border-radius: 30px;
+  }
+  .explore-section img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+  }

@@ -1,0 +1,33 @@
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.info-section {
+  margin-bottom: 15px;
+}
+
+.info-section h6 {
+  font-weight: bold;
+}
+
+/* Hide elements initially to apply animations only when in viewport */
+.animate__animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate__fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Ensures layout stays neat on smaller screens */
+@media (max-width: 768px) {
+  .map-section, .details-section {
+    margin-bottom: 20px;
+  }
+}
+
+  

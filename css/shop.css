@@ -1,0 +1,45 @@
+.content {
+  margin-left: 92px; 
+  margin-right: 92px;
+  padding: 25px;
+}
+.box {
+  opacity: 1; 
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); } 
+  100% { opacity: 1; transform: translateY(0); }
+}
+.add-btn:hover{
+  color: black;
+}
+.card:hover{
+    border: 2px solid #cbcaca;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgb(0, 0, 0); 
+}
+.dropdown-menu:hover{
+  cursor: pointer;
+}
+.dropdown-item:hover{
+  background-color: blue;
+  color: white;
+}
+.nav-item{
+  font-style: oblique;
+  font-family: Georgia,'Times New Roman', Times, serif;
+}
+.dropdown-item{
+  font-style: oblique;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-title{
+  font-style: oblique;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-price{
+  font-style: oblique;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

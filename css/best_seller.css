@@ -1,0 +1,103 @@
+.product-section h1 {
+    text-align: center;
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.product-section span {
+    color: orange;
+    font-weight: bold; 
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 20px; 
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    background-color: #f9f9f9; 
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+.product-info h3 {
+    font-size: 1.3rem; 
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.product-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.product-info .sale-price {
+    color: orange;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.product-info .old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 25px;
+}
+
+.product-actions {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.product-card:hover .product-actions {
+    opacity: 1;
+}
+
+.product-actions button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.3s;
+}
+.product-actions button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1); 
+}
+
+.product-actions button i {
+    font-size: 1.2rem;
+    color: #333; 
+}
+.product-actions button:hover i {
+    color: orange; 
+}

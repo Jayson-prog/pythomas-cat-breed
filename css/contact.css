@@ -1,0 +1,36 @@
+
+.contact-info, .contact-form {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.info-icon {
+    background-color: #004d40;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.btn-submit {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+.animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

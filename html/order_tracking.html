@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>track order</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+        <link rel="stylesheet" href="/css/track_order.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/home_upper.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="icon" href="/images/LOGO.png" type="image/x-icon">
+    </head> 
+    <body style="background-color: rgb(241, 241, 241);">
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand" href="index.html">
+            <img src="/images/LOGO.png" alt="Logo">
+            <span style="color: #ffffff; font-size: 40px; font-style: oblique; font-family: Georgia, 'Times New Roman', Times, serif;">
+            Pythomas Breed
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                        <li><a class="dropdown-item" href="whychooseus.html">Why choose us?</a></li>
+                        <li><a class="dropdown-item" href="pricing_plan.html">Pricing plan</a></li>
+                        <li><a class="dropdown-item" href="services.html">Services</a></li>
+                        <li><a class="dropdown-item" href="about_us.html">About us</a></li>
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light position-relative" href="cart.html">
+                        <i class="bi bi-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-light position-relative dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell"></i> <!-- Notification Icon from Bootstrap Icons -->
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            5 
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                        <li><a class="dropdown-item" href="#">Notification 1</a></li>
+                        <li><a class="dropdown-item" href="#">Notification 2</a></li>
+                        <li><a class="dropdown-item" href="#">Notification 3</a></li>
+                        <li><a class="dropdown-item" href="#">Notification 4</a></li>
+                        <li><a class="dropdown-item" href="#">Notification 5</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" style="margin-left: 30px;">
+                    <a class="nav-link dropdown-toggle p-0" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img style="border-radius: 40px;" width="50px" height="50px" src="/images/person1.jpg" alt="Profile Picture">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li> <!-- Optional: Profile link -->
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+      <div class="container mt-3 mb-5">
+        <div class="row">
+          <div class="col-lg-9 map-section animate__animated" id="map-container">
+            <h3 class="animate__animated">Order Tracking</h3>
+            <p class="animate__animated">Tracking number: <strong>156909</strong></p>
+            <div id="map" style="box-shadow: 0.5px 0.5px 6px black;"></div>
+      
+            <!-- Estimated Time & Distance -->
+            <div class="d-flex justify-content-between mt-3">
+              <div class="animate__animated">
+                <h6>Time Remaining</h6>
+                <p>20min <small>(from 40min)</small></p>
+              </div>
+              <div class="animate__animated">
+                <h6>Distance Remaining</h6>
+                <p>16km <small>(from 60km)</small></p>
+              </div>
+            </div>
+            <a href="shop.html"><button class="btn btn-outline bg-dark text-light">Continue shop</button></a>
+          </div>
+          <!-- Order Details Section -->
+          <div class="col-lg-3 details-section animate__animated" id="details-container" 
+               style="margin-top: 80px; background-color: rgb(255, 255, 255);">
+            <div class="order-details">
+              <div class="info-section" style="font-size: 13px;">
+                <h6 class="text-center p-1 mt-1" style="background-color: black; color: white;">
+                  Your Details
+                </h6>
+                <p>Jayson Pardilla</p>
+                <p>Vista del mar blk-1 lot-3 Brgy. Cabibihan, Caibiran, Biliran</p>
+              </div>
+      
+              <div class="info-section" style="font-size: 13px;">
+                <h6 class="text-center p-1" style="background-color: black; color: white;">
+                  Order Details
+                </h6>
+                <ul class="list-unstyled">
+                  <li>✔ Order accepted: 10:25 AM, 24 Oct 2020</li>
+                  <li>✔ Order prepared: 11:30 AM, 25 Oct 2020</li>
+                  <li>✔ Collected from warehouse: 14:30 PM, 26 Oct 2020</li>
+                  <li>🛵 Delivering</li>
+                  <li>⚪ Not yet received</li>
+                </ul>
+              </div>
+              <p style="padding-top: 170px;"><strong>Delivery in 30 minutes!</strong> Make sure you're available at the address.</p>
+            </div>
+          </div>
+        </div>
+      </div>      
+    <!--  Footer -->
+    <footer class="footer-container">
+    <div class="container-fluid m-0">
+        <div class="row">
+            <div class="col-md-4 footer-section mt-0">
+                <img class="mt-0" width="130px" height="100px" src="/images/LOGO.png" alt="">
+                <p class="mt-2 text-light">most trusted cat breed shop</p>
+                <div class="footer-icons mt-3 text-light">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-x"></i></a>
+                    <a href="#"><i class="bi bi-behance"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h2 class="footer-links-title text-light fw-bold">Popular Breed</h2>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#">Persian</a></li>
+                    <li><a href="#">Siamese</a></li>
+                    <li><a href="#">Munchkin</a></li>
+                    <li><a href="#">Ragdoll</a></li>
+                    <li><a href="#">Maine Coon</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 footer-section">
+                <h5 class="footer-links-title text-light">Quick Links</h5>
+                <ul class="footer-links list-unstyled text-primary">
+                    <li><a href="#">Home Page</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5 class="footer-links-title text-light">Contact Us</h5>
+                <p class="footer-contact text-light">
+                    <i class="bi bi-telephone"></i> +639675576231<span class="badge bg-warning text-dark"></span><br>
+                    <i class="bi bi-envelope"></i> pythomasbreeds@gmail.com
+                </p>
+                <p class="text-light">Subscribe</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Enter your email" aria-label="Email">
+                    <button><i class="bi bi-send"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom mt-4">
+            &copy;2024 All Rights Reserved | pythomas breed. 
+        </div>
+    </div>
+  </footer>
+  <!-- End Footer --> 
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.js"></script>
+  <script src="/js/track_order.js"></script>
+  <script src="/js/footer.js"></script>
+  </body>
+</html>
